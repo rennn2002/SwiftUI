@@ -70,7 +70,7 @@ struct ContentView: View {
                 let ob = self.data.popLast()
                 self.data.insert(ob!, at: 0)
             }) {
-                Text("Butoon")
+                Text("Button")
                     .font(.title)
             }
         }
