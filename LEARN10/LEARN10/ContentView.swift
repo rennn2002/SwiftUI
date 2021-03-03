@@ -8,9 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    let circleSize:CGFloat = 100.0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        GeometryReader { geo in
+            Circle()
+                .size(CGSize(width:self.circleSize, height: self.circleSize))
+                .offset(x:0, y:0)
+                .fill(Color.red)
+            
+            Circle()
+                .size(CGSize(width:self.circleSize, height: self.circleSize))
+                .offset(x:0, y:geo.size.height - self.circleSize)
+                .fill(Color.green)
+            
+            Circle()
+                .size(CGSize(width:self.circleSize, height: self.circleSize))
+                .offset(x:geo.size.width - self.circleSize, y:0)
+                .fill(Color.yellow)
+            
+            Circle()
+                .size(CGSize(width:self.circleSize, height: self.circleSize))
+                .offset(x:geo.size.width - self.circleSize, y:geo.size.height - self.circleSize)
+                .fill(Color.blue)
+        }
     }
 }
 
