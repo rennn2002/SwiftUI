@@ -115,6 +115,10 @@ struct ContentView: View {
                         }
                     }
                 Divider()
+                Text(flgPopover ? "shown":"hidden")
+                    .font(.title)
+                    .foregroundColor(.gray)
+                Divider()
                 }
             Spacer(minLength: 0)
         }
