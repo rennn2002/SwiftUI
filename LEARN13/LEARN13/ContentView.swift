@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            ZStack()f
+            ZStack()
             Divider()
             Text(self.msg)
                 .font(.title)
